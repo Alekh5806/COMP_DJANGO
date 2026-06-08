@@ -117,9 +117,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
+
+
+# this handles the static files for our projects like css , js , json files and images. we will create a folder called static in our project and we will put all or static files in that folder and we will tell django to look for static files in that folder.
 STATIC_URL = 'static/'
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 
-
+# this handles the media files for our projects like images and videos. we will create the folder called media in our project and we will put all our media files in that folder and we will tell djnago to look for media files in that folder. we will also tell django to serve the media files during devlopment 
+# how the static files and media files are served in production is different we will handle that later when we deploy our project to production. for now we will just serve the media files during development using the django built in server. they are different because the static files are served by the web server like nginx or apache and the media files are served by the django built in server during development and by the web server during production.
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
