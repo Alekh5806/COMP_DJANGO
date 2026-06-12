@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tweet',
+    'tailwind',
+    'theme',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +129,5 @@ STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 # how the static files and media files are served in production is different we will handle that later when we deploy our project to production. for now we will just serve the media files during development using the django built in server. they are different because the static files are served by the web server like nginx or apache and the media files are served by the django built in server during development and by the web server during production.
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+TAILWIND_APP_NAME = 'theme'
