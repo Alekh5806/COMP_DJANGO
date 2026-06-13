@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@layer components {
+  .btn {
+    @apply inline-flex items-center rounded-md bg-indigo-500 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-600;
+  }
+}
+
 /**
   * A catch-all path to Django template files, JavaScript, and Python files
   * that contain Tailwind CSS classes and will be scanned by Tailwind to generate the final CSS file.

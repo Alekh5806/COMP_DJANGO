@@ -1,0 +1,22 @@
+// this page will help the user to register for the website
+
+{% extends "base.html" %}
+
+{% block title %}
+Register
+{% endblock %}
+
+{% block content %}
+<div class="mx-auto max-w-7xl px-4 py-8">
+  <h1 class="text-5xl font-medium">Register</h1>
+  <form class="mt-6 space-y-4" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="flex space-x-4">
+      <button class="btn bg-red-400" type="submit">Register</button>
+      <a class="rounded-md px-4 py-2 text-sm font-medium text-blue-500 hover:bg-white/5 hover:text-white" href="{% url 'index' %}">Cancel</a>
+    </div>
+  </form>
+  <p class="mt-4 text-gray-300">Already have an account? <a class="text-blue-500 hover:underline" href="{% url 'login' %}">Login here</a>.</p>
+</div>
+{% endblock %}  

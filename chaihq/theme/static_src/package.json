@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "tailwindcss -i ./src/styles.css -o ../static/css/dist/styles.css --watch",
+    "build": "tailwindcss -i ./src/styles.css -o ../static/css/dist/styles.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.1.16",
+    "tailwindcss": "4.1.16"
+  }
+}

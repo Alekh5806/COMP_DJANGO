@@ -122,7 +122,7 @@ USE_TZ = True
 
 
 # this handles the static files for our projects like css , js , json files and images. we will create a folder called static in our project and we will put all or static files in that folder and we will tell django to look for static files in that folder.
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 
 # this handles the media files for our projects like images and videos. we will create the folder called media in our project and we will put all our media files in that folder and we will tell djnago to look for media files in that folder. we will also tell django to serve the media files during devlopment 
@@ -131,3 +131,4 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 TAILWIND_APP_NAME = 'theme'
+TAILWIND_USE_STANDALONE_BINARY = False

@@ -16,9 +16,15 @@ Including another URLconf
 """
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import include
 
 urlpatterns = [
     path('', views.index, name='index'),
-
-    
+    path('create/', views.create_tweet, name='tweet_create'),
+    path('<int:tweet_id>/', views.tweet_detail, name='tweet_detail'),
+    path('<int:tweet_id>/edit/', views.edit_tweet, name='tweet_edit'),
+    path('<int:tweet_id>/delete/', views.delete_tweet, name='tweet_delete'),
+    path('register/', views.register, name='register'),
 ]
